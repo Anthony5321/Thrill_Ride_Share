@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const Parks = new Schema(
   {
     name: { type: String, required: true },
-    image: { type: String },
+    image: { type: String, required: true },
     location: { type: String, required: true },
     website: { type: String, required: true },
     hours: { type: String, required: true }
