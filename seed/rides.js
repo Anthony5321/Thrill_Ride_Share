@@ -15,7 +15,7 @@ const main = async () => {
         category: 'Roller Coaster',
         height: '54 inches',
         speed: '55mph',
-        park: ''
+        park: '63f52ad6bcd21886d96acf54'
       }
   ]
 
