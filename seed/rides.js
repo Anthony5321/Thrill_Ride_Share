@@ -7,7 +7,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
   const rides = [
     {
-      name: '',
+      name: 'Six flags',
       city: '',
       logo: ''
     }

@@ -7,8 +7,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
   const parks = [
     {
-      name: '',
-      city: '',
+      name: 'Six flags',
+      city: 'Agawam, MA',
       logo: ''
     }
   ]
