@@ -1,5 +1,5 @@
 const db = require('../db')
-const parks = require('../models/parks')
+const Parks = require('../models/parks')
 
 // Connect to the database
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
@@ -12,10 +12,17 @@ const main = async () => {
       image: 'https://i.imgur.com/WOsxgIS.jpg',
       website: 'https://www.sixflags.com/newengland',
       hours: '11 am to 7 pm except tuesday, and wednesday it is 11 am to 6 pm'
+    },
+    {
+    name: 'Legoland',
+    location: 'Goshen, NY',
+    image: '',
+    website: '',
+    hours: ''
     }
-  ]
+]
 
-  await parks.insertMany(parks)
+  await Parks.insertMany(parks)
   console.log('Created some parks!')
 }
 const run = async () => {

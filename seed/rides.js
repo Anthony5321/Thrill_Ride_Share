@@ -7,9 +7,13 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const main = async () => {
   const rides = [
     {
-      name: 'Six flags',
-      city: '',
-      logo: ''
+    name: { type: String, required: true },
+    image: { type: String },
+    description: { type: String, required: true },
+    category: { type: String, required: true },
+    height: { type: String },
+    speed: { type: String },
+    park: { type: Schema.Types.ObjectId, ref: 'Parks' }
     }
   ]
 
