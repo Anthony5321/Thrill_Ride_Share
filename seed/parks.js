@@ -15,7 +15,7 @@ const main = async () => {
     }
   ]
 
-  await Store.insertMany(parks)
+  await parks.insertMany(parks)
   console.log('Created some parks!')
 }
 const run = async () => {
