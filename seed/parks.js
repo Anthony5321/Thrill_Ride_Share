@@ -8,8 +8,10 @@ const main = async () => {
   const parks = [
     {
       name: 'Six flags',
-      city: 'Agawam, MA',
-      logo: ''
+      location: 'Agawam, MA',
+      image: 'https://i.imgur.com/WOsxgIS.jpg',
+      website: 'https://www.sixflags.com/newengland',
+      hours: '11 am to 7 pm except tuesday, and wednesday it is 11 am to 6 pm'
     }
   ]
 
