@@ -50,6 +50,14 @@ function App() {
     getRides()
   }, [])
 
+  const parkName = (result) => {
+    for (let i = 0; i < park.length; i++) {
+      if (park[i]._id === result) {
+        return park[i].name
+      }
+    }
+  }
+
   return (
     <div className="App">
       <Nav />
@@ -59,7 +67,13 @@ function App() {
           <Route path="about" element={<About />} />
           <Route
             path="rides/details/:id"
-            element={<RideDetails park={park} />}
+            element={
+              <RideDetails
+                park={park}
+                getRides={getRides}
+                parkName={parkName}
+              />
+            }
           />
           <Route
             path="view/park/:id"
