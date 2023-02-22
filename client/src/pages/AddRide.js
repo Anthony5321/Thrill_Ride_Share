@@ -3,7 +3,6 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const AddRide = ({ getRides, initRide, park }) => {
-  console.log(park)
   const [newRide, setNewRide] = useState(initRide)
   const navigate = useNavigate()
 
