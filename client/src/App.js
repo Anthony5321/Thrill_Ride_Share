@@ -55,16 +55,16 @@ function App() {
       <Nav />
       <main>
         <Routes>
-          <Route path="/" element={<Home park={park} />} />
+          {/* <Route path="/" element={<Home park={park} />} /> */}
           <Route path="about" element={<About />} />
-          <Route
+          {/* <Route
             path="rides/details/:id"
             element={<RideDetails park={park} getRides={getRides} />}
           />
           <Route
             path="view/park/:id"
             element={<ViewParks ride={ride} park={park} />}
-          />
+          /> */}
           <Route
             path="add/"
             element={

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const AddRide = ({ getRides, initRide, park }) => {
+  console.log(park)
   const [newRide, setNewRide] = useState(initRide)
   const navigate = useNavigate()
 
@@ -74,7 +75,7 @@ const AddRide = ({ getRides, initRide, park }) => {
           <option value="Select" hidden>
             Select
           </option>
-          {parks.map((park) => (
+          {park.map((park) => (
             <option value={`${park._id}`} key={park._id}>
               {park.name}
             </option>
