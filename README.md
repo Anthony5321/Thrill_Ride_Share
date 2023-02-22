@@ -4,7 +4,7 @@
 
 ### By: Anthony Harpestad, Ting Ting Qiu, Josh Jumelet
 
-#### [Anthony's github](https://github.com/Anthony5321) | [Anthony's LinkedIn](https://www.linkedin.com/in/anthony-harpestad-16322a257/)  [Ting Ting's github](https://github.com/ttqiu) | [Ting Ting's LinkedIn](https://www.linkedin.com/in/ting-ting-qiu-062587246/)  [Josh's github](https://github.com/joshjumelet) | [Josh's LinkedIn](https://www.linkedin.com/in/joshua-jumelet/)
+#### [Anthony's github](https://github.com/Anthony5321)  [Anthony's LinkedIn](https://www.linkedin.com/in/anthony-harpestad-16322a257/) | [Ting Ting's github](https://github.com/ttqiu)  [Ting Ting's LinkedIn](https://www.linkedin.com/in/ting-ting-qiu-062587246/) | [Josh's github](https://github.com/joshjumelet)  [Josh's LinkedIn](https://www.linkedin.com/in/joshua-jumelet/)
 ***
 
 ### ***Description***
