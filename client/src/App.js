@@ -55,8 +55,13 @@ function App() {
       <Nav />
       <main>
         <Routes>
+<<<<<<< HEAD
           <Route path="/" element={<Home park={park} />} />
           {/* <Route path="/About" element={<About />} /> */}
+=======
+          {/* <Route path="/" element={<Home park={park} />} /> */}
+          <Route path="about" element={<About />} />
+>>>>>>> c4536701673d7bcd3607b6568ded2546c404e28d
           {/* <Route
             path="rides/details/:id"
             element={<RideDetails park={park} />}
