@@ -5,7 +5,7 @@ import RideCard from '../components/RideCard'
 import ParkCard from '../components/ParkCard'
 import { Link } from 'react-router-dom'
 
-const Home = ({ parks, parkName }) => {
+const Home = ({ park, parkName }) => {
     const [searchResults, setSearchResults] = useState([])
     const [searched, toggleSearched] = useState(false)
     const [searchQuery, setSearchQuery] = useState('')
@@ -13,7 +13,7 @@ const Home = ({ parks, parkName }) => {
     const getSearchResults = async (e) => {
         e.preventDefault()
         const res = await axios.get(`http://localhost:3001/rides/${searchQuery}`)
-        setSearchResults(res.data.clothes)
+        setSearchResults(res.data.ride)
         toggleSearched(true)
         setSearchQuery('')
       }
@@ -21,6 +21,7 @@ const Home = ({ parks, parkName }) => {
       const handleChange = (event) => {
         setSearchQuery(event.target.value)
       }
+console.log(searchQuery);
 
 return (
     <div>
@@ -41,7 +42,7 @@ return (
                   <RideCard
                     name={result.name}
                     image={result.image}
-                    ride={parkName(result.park)}
+                    // ride={parkName(result.park)}
                   />
                 </Link>
               ))}
@@ -51,7 +52,7 @@ return (
           <div>
           <h2> parks</h2>
           <section className="container-grid">
-          {parks.map((park) => (
+          {park.map((park) => (
             <Link to={`/view/parks/${park._id}`} key={park._id}>
               <ParkCard
                 image={park.image}
