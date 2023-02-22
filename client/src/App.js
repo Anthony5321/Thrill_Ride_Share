@@ -61,10 +61,10 @@ function App() {
             path="rides/details/:id"
             element={<RideDetails park={park} />}
           /> */}
-          {/* <Route
+          <Route
             path="view/park/:id"
             element={<ViewParks ride={ride} park={park} />}
-          /> */}
+          />
           <Route
             path="add/"
             element={
