@@ -34,7 +34,7 @@ const RideDetails = ({ getRides, park, parkName }) => {
 
   const deleted = async () => {
     let text = 'Are you sure to delete this ride?'
-    if (window.confirm(text) == true) {
+    if (window.confirm(text) === true) {
       await axios.delete(`http://localhost:3001/rides/${id}`, rideDetails)
       setRideDetails({ ...rideDetails })
       getRides()
@@ -49,7 +49,7 @@ const RideDetails = ({ getRides, park, parkName }) => {
       </div>
       <section className="image-container">
         <a href={rideDetails.website}>
-          <img src={rideDetails.image} alt="image" />
+          <img src={rideDetails.image} alt="" />
         </a>
       </section>
       <section className="details">
@@ -95,12 +95,12 @@ const RideDetails = ({ getRides, park, parkName }) => {
               value={rideDetails.image}
             />
             <label htmlFor="description">Description:</label>
-            <input
-              type="text"
+            <textarea
+              cols="40" rows="5"
               id="description"
               onChange={handleChange}
-              value={rideDetails.description}
-            />
+              value={rideDetails.description}>
+            </textarea>
             <label htmlFor="category">Category:</label>
             <input
               type="text"
