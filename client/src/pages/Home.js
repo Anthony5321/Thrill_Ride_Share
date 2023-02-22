@@ -21,7 +21,6 @@ const Home = ({ park, parkName }) => {
   const handleChange = (event) => {
     setSearchQuery(event.target.value)
   }
-  console.log(searchQuery)
 
   return (
     <div>
