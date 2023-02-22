@@ -8,7 +8,12 @@ const ViewRides = ({ ride, park }) => {
 
   return (
     <div>
-      <h1>{parks.name}</h1>
+      <div className="park-info">
+        <h1>{parks.name}</h1>
+        <h3>Location: {parks.location}</h3>
+        <h3>Website: {parks.website}</h3>
+        <h3>Park Hours: {parks.hours}</h3>
+      </div>
       <div className="container-grid">
         {rideDetails.map((ride) => (
           <NavLink to={`/rides/details/${ride._id}`} key={ride._id}>
