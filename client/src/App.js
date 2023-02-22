@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
-import About from './Pages/About'
-import Home from './Pages/Home'
-import rideDetails from './Pages/rideDetails'
-import viewPark from './Pages/viewPark'
-import addRide from './Pages/addRide'
-import addPark from './Pages/addPark'
+import About from './pages/About'
+import Home from './pages/Home'
+import RideDetails from './pages/RideDetails'
+import ViewParks from './pages/ViewParks'
+import AddRide from './pages/AddRide'
+import AddPark from './pages/AddPark'
 
 function App() {
   const [park, setPark] = useState([])
@@ -54,39 +54,24 @@ function App() {
     <div className="App">
       <Nav />
       <main>
-      <Routes>
-          <Route
-            path="/"
-            element={<Home park={park} />}
-          />
+        <Routes>
+          <Route path="/" element={<Home park={park} />} />
           <Route path="about" element={<About />} />
           <Route
             path="rides/details/:id"
-            element={
-              <rideDetails
-                park={park}
-                getRides={getRides}
-              />
-            }
+            element={<RideDetails park={park} getRides={getRides} />}
           />
           <Route
             path="view/park/:id"
-            element={<viewPark ride={ride} park={park} />}
+            element={<ViewParks ride={ride} park={park} />}
           />
           <Route
             path="add/"
             element={
-              <addRide
-                getRides={getRides}
-                initRide={initRide}
-                park={park}
-              />
+              <AddRide getRides={getRides} initRide={initRide} park={park} />
             }
           />
-          <Route
-            path="add/park"
-            element={<addPark getParks={getParks} />}
-          />
+          <Route path="add/park" element={<AddPark getParks={getParks} />} />
         </Routes>
       </main>
     </div>
