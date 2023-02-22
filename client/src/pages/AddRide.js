@@ -43,12 +43,12 @@ const AddRide = ({ getRides, initRide, park }) => {
           value={newRide.image}
         />
         <label htmlFor="description">Description:</label>
-        <input
-          type="text"
+        <textarea
+          cols="40" rows="5"
           id="description"
           onChange={handleChange}
-          value={newRide.description}
-        />
+          value={newRide.description}> 
+        </textarea>
         <label htmlFor="category">Category:</label>
         <input
           type="text"
