@@ -45,7 +45,7 @@ const AddRide = ({ getRides, initRide, park }) => {
         <label htmlFor="description">Description:</label>
         <input
           type="text"
-          id="style"
+          id="description"
           onChange={handleChange}
           value={newRide.description}
         />
