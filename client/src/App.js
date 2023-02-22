@@ -57,10 +57,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home park={park} />} />
           <Route path="about" element={<About />} />
-          {/* <Route
+          <Route
             path="rides/details/:id"
             element={<RideDetails park={park} />}
-          /> */}
+          />
           <Route
             path="view/park/:id"
             element={<ViewParks ride={ride} park={park} />}

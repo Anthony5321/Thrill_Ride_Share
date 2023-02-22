@@ -71,16 +71,16 @@ const getRideById = async (req, res) => {
   }
 }
 
-// const updateRide = async (req, res) => {
-//   try {
-//     const ride = await Rides.findByIdAndUpdate(req.params.id, req.body, {
-//       new: true
-//     })
-//     res.status(200).json(ride)
-//   } catch (error) {
-//     return res.status(500).send(error.message)
-//   }
-// }
+const updateRide = async (req, res) => {
+  try {
+    const ride = await Rides.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.status(200).json(ride)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
 
 const deleteRide = async (req, res) => {
   try {
@@ -102,5 +102,6 @@ module.exports = {
   getAllRides,
   getRideByName,
   getRideById,
-  deleteRide
+  deleteRide,
+  updateRide
 }
