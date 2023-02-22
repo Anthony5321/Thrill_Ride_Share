@@ -50,7 +50,7 @@ const Home = ({ park, parkName }) => {
         </div>
       )}
       <div>
-        <h2> parks</h2>
+        <h2>Parks</h2>
         <section className="container-grid">
           {park.map((park) => (
             <Link to={`/view/park/${park._id}`} key={park._id}>
