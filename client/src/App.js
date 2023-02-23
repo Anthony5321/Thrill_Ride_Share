@@ -24,7 +24,7 @@ function App() {
 
   const getParks = async () => {
     try {
-      const res = await axios.get('http://localhost:3001/parks')
+      const res = await axios.get('/parks')
       setPark(res.data.parks)
     } catch (err) {
       console.log(err)
@@ -39,7 +39,7 @@ function App() {
 
   const getRides = async () => {
     try {
-      const res = await axios.get('http://localhost:3001/rides')
+      const res = await axios.get('/rides')
       setRide(res.data.rides)
     } catch (err) {
       console.log(err)

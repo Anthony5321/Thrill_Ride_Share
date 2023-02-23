@@ -23,7 +23,7 @@ const RideDetails = ({ getRides, park, ride }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.put(`http://localhost:3001/rides/${id}`, rideDetails)
+    await axios.put(`/rides/${id}`, rideDetails)
     setRideDetails({ ...rideDetails })
     alert('The info on this ride has been updated!')
     window.location.reload(false)
@@ -40,7 +40,7 @@ const RideDetails = ({ getRides, park, ride }) => {
   const deleted = async () => {
     let text = 'Are you sure to delete this ride?'
     if (window.confirm(text) === true) {
-      await axios.delete(`http://localhost:3001/rides/${id}`, rideDetails)
+      await axios.delete(`/rides/${id}`, rideDetails)
       setRideDetails({ ...rideDetails })
       getRides()
       navigate('/')
