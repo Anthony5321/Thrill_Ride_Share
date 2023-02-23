@@ -16,7 +16,7 @@ const AddPark = ({ getParks }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('http://localhost:3001/parks', newPark)
+      await axios.post('/parks', newPark)
       setNewPark(initPark)
       getParks()
       navigate('/')

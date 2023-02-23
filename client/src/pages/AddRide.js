@@ -9,7 +9,7 @@ const AddRide = ({ getRides, initRide, park }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('http://localhost:3001/rides', newRide)
+      await axios.post('/rides', newRide)
       setNewRide(initRide)
       getRides()
       navigate('/')
