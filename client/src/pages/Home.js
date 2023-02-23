@@ -24,7 +24,7 @@ const Home = ({ park, parkName }) => {
 
   return (
     <div>
-      <h1 className="Slogan">Let your worries fly past you</h1>
+      <h1 className="slogan">Let your worries fly past you</h1>
       <div>
         <Search
           onSubmit={getSearchResults}
@@ -49,7 +49,7 @@ const Home = ({ park, parkName }) => {
         </div>
       )}
       <div>
-        <h2>Parks</h2>
+        <h2 className="parks-title">Parks</h2>
         <section className="container-grid">
           {park.map((park) => (
             <Link to={`/view/park/${park._id}`} key={park._id}>
