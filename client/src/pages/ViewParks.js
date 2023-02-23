@@ -14,7 +14,9 @@ const ViewRides = ({ ride, park }) => {
       <div className="park-info">
         <h1>{parks?.name}</h1>
         <h3>Location: {parks?.location}</h3>
-        <h3>Website: {parks?.website}</h3>
+        <h3>
+          Website: <a href={parks?.website}>Click Here</a>
+        </h3>
         <h3>Park Hours: {parks?.hours}</h3>
       </div>
       <div className="container-grid">

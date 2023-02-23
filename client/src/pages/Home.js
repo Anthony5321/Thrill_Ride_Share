@@ -5,7 +5,7 @@ import RideCard from '../components/RideCard'
 import ParkCard from '../components/ParkCard'
 import { Link } from 'react-router-dom'
 
-const Home = ({ park, parkName }) => {
+const Home = ({ park, ride }) => {
   const [searchResults, setSearchResults] = useState([])
   const [searched, toggleSearched] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
@@ -22,9 +22,11 @@ const Home = ({ park, parkName }) => {
     setSearchQuery(event.target.value)
   }
 
+  const newly_add = ride[ride.length - 1]
+
   return (
     <div>
-      <h1 className="Slogan">Let your worries fly past you</h1>
+      <h1 className="slogan">Let your worries fly past you</h1>
       <div>
         <Search
           onSubmit={getSearchResults}
@@ -38,18 +40,14 @@ const Home = ({ park, parkName }) => {
           <section className="container-grid">
             {searchResults.map((result) => (
               <Link to={`/rides/details/${result._id}`} key={result._id}>
-                <RideCard
-                  name={result.name}
-                  image={result.image}
-                  // ride={parkName(result.park)}
-                />
+                <RideCard name={result.name} image={result.image} />
               </Link>
             ))}
           </section>
         </div>
       )}
       <div>
-        <h2>Parks</h2>
+        <h2 className="parks-title">Parks</h2>
         <section className="container-grid">
           {park.map((park) => (
             <Link to={`/view/park/${park._id}`} key={park._id}>
@@ -61,6 +59,16 @@ const Home = ({ park, parkName }) => {
             </Link>
           ))}
         </section>
+      </div>
+      <div>
+        <h2>Newly Added Ride</h2>
+        <Link
+          to={`/rides/details/${newly_add?._id}`}
+          key={newly_add?._id}
+          className="container-grid"
+        >
+          <RideCard name={newly_add?.name} image={newly_add?.image} />
+        </Link>
       </div>
     </div>
   )

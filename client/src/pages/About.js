@@ -32,32 +32,100 @@ const About = () => {
           information here helpful in planning your next theme park adventure!
         </p>
       </span>
-      <div className="Josh-profile">
-        <img className='josh' src={'https://i.imgur.com/rtAwtJu.jpg'} alt="" />
-        <a className='josh-git' href="https://github.com/joshjumelet" target="blank">
-          <img className='github' style={{width: 10, height: 10}} src="https://i.imgur.com/AjmoOeq.png"alt="github"/>
-        </a>
-        <a className='josh-linkedIn' href="https://www.linkedin.com/in/joshua-jumelet/" target="blank">
-          <img className='linkedIn' style={{width: 20, height: 20}} src="https://i.imgur.com/N4ceP5A.png"alt="linkedIn"/>
-        </a>
+      <div className="about-us">
+        <div className="Josh-profile">
+          <img
+            className="josh"
+            src={'https://i.imgur.com/rtAwtJu.jpg'}
+            alt=""
+          />
+          <a
+            className="josh-git"
+            href="https://github.com/joshjumelet"
+            target="blank"
+          >
+            <img
+              className="github"
+              style={{ width: 30, height: 30 }}
+              src="https://i.imgur.com/AjmoOeq.png"
+              alt="github"
+            />
+          </a>
+          <a
+            className="josh-linkedIn"
+            href="https://www.linkedin.com/in/joshua-jumelet/"
+            target="blank"
+          >
+            <img
+              className="linkedIn"
+              style={{ width: 30, height: 30 }}
+              src="https://i.imgur.com/N4ceP5A.png"
+              alt="linkedIn"
+            />
+          </a>
         </div>
         <div className="ting-ting-profile">
-        <img className='ting-ting' src={'https://i.imgur.com/otWjrs9.jpg'} alt="" />
-        <a className='ting-ting-git' href="https://github.com/ttqiu" target="blank">
-          <img className='github' style={{width: 10, height: 10}} src="https://i.imgur.com/AjmoOeq.png"alt="github"/>
-        </a>
-        <a className='ting-ting-linkedIn' href="https://www.linkedin.com/in/ting-ting-qiu-062587246/" target="blank">
-          <img className='linkedIn' style={{width: 20, height: 20}} src="https://i.imgur.com/N4ceP5A.png"alt="linkedIn"/>
-        </a>
+          <img
+            className="ting-ting"
+            src={'https://i.imgur.com/otWjrs9.jpg'}
+            alt=""
+          />
+          <a
+            className="ting-ting-git"
+            href="https://github.com/ttqiu"
+            target="blank"
+          >
+            <img
+              className="github"
+              style={{ width: 30, height: 30 }}
+              src="https://i.imgur.com/AjmoOeq.png"
+              alt="github"
+            />
+          </a>
+          <a
+            className="ting-ting-linkedIn"
+            href="https://www.linkedin.com/in/ting-ting-qiu-062587246/"
+            target="blank"
+          >
+            <img
+              className="linkedIn"
+              style={{ width: 30, height: 30 }}
+              src="https://i.imgur.com/N4ceP5A.png"
+              alt="linkedIn"
+            />
+          </a>
         </div>
         <div className="anthony-profile">
-        <img className='anthony' src={'https://i.imgur.com/sBLPp85.jpg'} alt="" />
-        <a className='anthony-git' href="https://github.com/Anthony5321" target="blank">
-          <img className='github' style={{width: 10, height: 10}} src="https://i.imgur.com/AjmoOeq.png"alt="github"/>
-        </a>
-        <a className='anthony-linkedIn' href="https://www.linkedin.com/in/anthony-harpestad-16322a257/" target="blank">
-          <img className='linkedIn' style={{width: 20, height: 20}} src="https://i.imgur.com/N4ceP5A.png"alt="linkedIn"/>
-        </a>
+          <img
+            className="anthony"
+            src={'https://i.imgur.com/sBLPp85.jpg'}
+            alt=""
+          />
+          <a
+            className="anthony-git"
+            href="https://github.com/Anthony5321"
+            target="blank"
+          >
+            <img
+              className="github"
+              style={{ width: 30, height: 30 }}
+              src="https://i.imgur.com/AjmoOeq.png"
+              alt="github"
+            />
+          </a>
+          <a
+            className="anthony-linkedIn"
+            href="https://www.linkedin.com/in/anthony-harpestad-16322a257/"
+            target="blank"
+          >
+            <img
+              className="linkedIn"
+              style={{ width: 30, height: 30 }}
+              src="https://i.imgur.com/N4ceP5A.png"
+              alt="linkedIn"
+            />
+          </a>
+        </div>
       </div>
     </div>
   )
