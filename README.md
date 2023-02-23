@@ -31,7 +31,7 @@
 
 ##### An ERD and Component Heirarchy Diagram were created for this application.
 
-##### The project itself was deployed and can be viewed [here](URL).
+##### The project itself was deployed and can be viewed [here](https://thrill-ride-share.herokuapp.com/).
 
 ---
 
