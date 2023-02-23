@@ -24,7 +24,7 @@ function App() {
 
   const getParks = async () => {
     try {
-      const res = await axios.get('/parks')
+      const res = await axios.get('/api/parks')
       setPark(res.data.parks)
     } catch (err) {
       console.log(err)
@@ -39,7 +39,7 @@ function App() {
 
   const getRides = async () => {
     try {
-      const res = await axios.get('/rides')
+      const res = await axios.get('/api/rides')
       setRide(res.data.rides)
     } catch (err) {
       console.log(err)
@@ -50,13 +50,6 @@ function App() {
     getRides()
   }, [])
 
-  const parkName = (result) => {
-    for (let i = 0; i < park.length; i++) {
-      if (park[i]._id === result) {
-        return park[i].name
-      }
-    }
-  }
 
   return (
     <div className="App">

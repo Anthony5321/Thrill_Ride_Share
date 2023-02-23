@@ -4,6 +4,7 @@ import axios from 'axios'
 
 const RideDetails = ({ getRides, park, ride }) => {
   let { id } = useParams()
+  console.log(id);
   const [rideDetails, setRideDetails] = useState({})
   const [updated, setUpdated] = useState(false)
   const navigate = useNavigate()
@@ -23,7 +24,7 @@ const RideDetails = ({ getRides, park, ride }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.put(`/rides/${id}`, rideDetails)
+    await axios.put(`/api/rides/${id}`, rideDetails)
     setRideDetails({ ...rideDetails })
     alert('The info on this ride has been updated!')
     window.location.reload(false)
@@ -40,10 +41,10 @@ const RideDetails = ({ getRides, park, ride }) => {
   const deleted = async () => {
     let text = 'Are you sure to delete this ride?'
     if (window.confirm(text) === true) {
-      await axios.delete(`/rides/${id}`, rideDetails)
+      await axios.delete(`/api/rides/${id}`, rideDetails)
       setRideDetails({ ...rideDetails })
-      getRides()
       navigate('/')
+      getRides()
     }
   }
 

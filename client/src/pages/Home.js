@@ -12,7 +12,7 @@ const Home = ({ park, ride }) => {
 
   const getSearchResults = async (e) => {
     e.preventDefault()
-    const res = await axios.get(`/rides/${searchQuery}`)
+    const res = await axios.get(`/api/rides/${searchQuery}`)
     setSearchResults(res.data.ride)
     toggleSearched(true)
     setSearchQuery('')
