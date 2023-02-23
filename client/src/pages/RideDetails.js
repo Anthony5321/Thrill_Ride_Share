@@ -2,19 +2,24 @@ import { useParams, NavLink, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const RideDetails = ({ getRides, park, parkName }) => {
+const RideDetails = ({ getRides, park, ride }) => {
   let { id } = useParams()
   const [rideDetails, setRideDetails] = useState({})
   const [updated, setUpdated] = useState(false)
   const navigate = useNavigate()
 
+  const rideInfo = ride.find((ride) => ride._id === id)
+
   useEffect(() => {
-    const getRideDetails = async () => {
-      const res = await axios.get(`http://localhost:3001/rides/details/${id}`)
-      setRideDetails(res.data.ride)
+    setRideDetails(rideInfo)
+  }, [ride])
+
+  const parkDetails = () => {
+    if (rideDetails !== undefined) {
+      const parks = park.find((park) => park._id === rideInfo.park)
+      return parks
     }
-    getRideDetails()
-  }, [id])
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -45,30 +50,30 @@ const RideDetails = ({ getRides, park, parkName }) => {
   return (
     <div className="ride-content">
       <div>
-        <h1>{rideDetails.name}</h1>
+        <h1>{rideDetails?.name}</h1>
       </div>
       <section className="image-container">
-        <a href={rideDetails.website}>
-          <img src={rideDetails.image} alt="" />
+        <a href={rideDetails?.website}>
+          <img src={rideDetails?.image} alt="" />
         </a>
       </section>
       <section className="details">
         <div className="flex-row">
           <div className="detail">
             <h3>Description:</h3>
-            <p>{rideDetails.description}</p>
+            <p>{rideDetails?.description}</p>
           </div>
           <div className="detail">
-            <h3>Category: {rideDetails.category}</h3>
+            <h3>Category: {rideDetails?.category}</h3>
           </div>
           <div className="detail">
-            <h3>Height: {rideDetails.height}</h3>
+            <h3>Height: {rideDetails?.height}</h3>
           </div>
           <div className="detail">
-            <h3>Speed: {rideDetails.speed}</h3>
+            <h3>Speed: {rideDetails?.speed}</h3>
           </div>
           <div className="detail">
-            <h3>Park: {parkName(rideDetails.park)}</h3>
+            <h3>Park: {parkDetails()?.name}</h3>
           </div>
         </div>
       </section>
@@ -96,11 +101,12 @@ const RideDetails = ({ getRides, park, parkName }) => {
             />
             <label htmlFor="description">Description:</label>
             <textarea
-              cols="40" rows="5"
+              cols="40"
+              rows="5"
               id="description"
               onChange={handleChange}
-              value={rideDetails.description}>
-            </textarea>
+              value={rideDetails.description}
+            ></textarea>
             <label htmlFor="category">Category:</label>
             <input
               type="text"
