@@ -37,19 +37,27 @@
 
 ### **_Screenshots_**
 
-##### image header 1
+##### Home Page:
 
-![]()
+![Home Page](images/Home.jpeg)
 
-##### image header 2
+##### Park Details:
 
-![]()
+![Park Details](images/ParkDetails.jpeg)
+
+##### Ride Details:
+
+![Ride Details](images/RideDetails.jpeg)
+
+##### Add a Ride:
+
+![Add Ride](images/AddRide.jpeg)
 
 ---
 
 ### **_Future Updates_**
 
-- [ ] Most recent added ride featured on home page
+- [x] Most recent added ride featured on home page
 - [ ] Implement API feature
 - [ ] User comments feature for rides
 
