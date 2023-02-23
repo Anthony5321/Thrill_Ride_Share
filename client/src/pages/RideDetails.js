@@ -4,7 +4,6 @@ import axios from 'axios'
 
 const RideDetails = ({ getRides, park, ride }) => {
   let { id } = useParams()
-  console.log(id);
   const [rideDetails, setRideDetails] = useState({})
   const [updated, setUpdated] = useState(false)
   const navigate = useNavigate()

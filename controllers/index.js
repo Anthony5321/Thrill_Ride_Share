@@ -85,7 +85,6 @@ const updateRide = async (req, res) => {
 const deleteRide = async (req, res) => {
   try {
     const { id } = req.params
-    console.log(req.params);
     const deleted = await Rides.findByIdAndDelete(id)
     if (deleted) {
       return res.status(200).send('Ride deleted')
