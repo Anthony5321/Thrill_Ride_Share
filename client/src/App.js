@@ -71,7 +71,8 @@ function App() {
               <RideDetails
                 park={park}
                 getRides={getRides}
-                parkName={parkName}
+                ride={ride}
+                setPark={setPark}
               />
             }
           />
