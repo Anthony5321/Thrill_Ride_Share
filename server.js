@@ -16,6 +16,8 @@ app.use(express.json())
 
 app.use('/api', routes)
 
+app.use(express.static(`${__dirname}/client/build`))
+
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 app.get('/*', (req, res) => {

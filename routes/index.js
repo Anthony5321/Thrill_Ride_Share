@@ -13,4 +13,4 @@ router.get('/parks', controllers.getAllParks)
 
 module.exports = router
 
-module.exports = router
+
